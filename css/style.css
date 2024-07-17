@@ -2,6 +2,7 @@
   font-family: "Atlas Grotesk", sans-serif;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 }
 
 .icon,
-.meun,
+.menu,
 .search {
   display: flex;
   --padding: 14px;
@@ -21,11 +22,14 @@ p {
   width: max-content;
   align-items: center;
   margin-left: var(--padding);
+  user-select: none;
 }
 
 .Nav {
+  top: 0;
   display: flex;
   justify-content: space-between;
+  max-height: 5%;
   align-items: center;
   margin: var(--padding);
   border-bottom: 1px;
@@ -36,10 +40,10 @@ p {
 }
 
 .menu a {
+  width: fit-content;
   text-decoration: none;
   color: inherit;
   cursor: pointer;
-  margin-left: var(--padding);
   padding: 6px;
   border-radius: 7px;
 }
@@ -92,7 +96,8 @@ p {
 }
 
 .Home {
-  height: 600px;
+  height: 1000px;
+  width: 100%;
   background-image: url(/pexels-stefanstefancik-91217.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -120,6 +125,7 @@ p {
   margin-left: 5%;
   border-radius: 6px;
   padding: 7px;
+  cursor: pointer;
 }
 
 .About-Us h2 {
@@ -129,7 +135,8 @@ p {
 }
 
 .About-Us {
-  height: 200px;
+  margin-top: 1%;
+  height: fit-content;
   width: 100%;
 }
 
@@ -139,6 +146,7 @@ p {
   margin-top: 1%;
   margin-left: 5%;
   margin-right: 5%;
+  margin-bottom: 5%;
   line-height: 1.8;
   font-size: 20px;
   padding: var(--padding);
@@ -152,18 +160,19 @@ p {
 }
 
 .Our-Team h2 {
+  width: 100%;
   font-size: 30px;
-  margin-top: 5%;
-  margin-left: 5%;
+  margin: 5%;
 }
 
 .Our-Team div {
+  margin: 5%;
   margin-left: 10%;
   text-align: center;
 }
 
 .Our-Team img {
-  margin-top: 5%;
+  margin: 5%;
   height: 200px;
   width: 200px;
   object-fit: contain;
@@ -178,6 +187,7 @@ p {
   width: 100%;
   text-align: center;
   padding: var(--padding);
+  margin-bottom: 5%;
 }
 
 .Company {
@@ -222,7 +232,8 @@ p {
 }
 
 .Place img {
-  margin-top: 5%;
+  min-width: 300px;
+  margin: 3%;
   margin-left: 5%;
   height: 300px;
   width: 600px;
@@ -235,19 +246,22 @@ p {
 .Contact {
   display: flex;
   flex-wrap: wrap;
+  height: fit-content;
+  background-color: #242424;
 }
 
 .Contact h2 {
   font-size: 50px;
-  margin-top: 20%;
+  margin-top: 25%;
   margin-left: 10%;
-
+  user-select: none;
   color: #ffffff;
 }
 
 .Message {
   display: flex;
   flex-wrap: wrap;
+  height: auto;
   margin-top: 20%;
   margin-left: 10%;
   margin-bottom: 20%;
@@ -280,6 +294,20 @@ p {
   padding: 1%;
   border-radius: 6px;
   color: #242424;
+  cursor: pointer;
+}
+
+.media {
+  text-align: center;
+}
+
+.media img {
+  user-select: none;
+  margin-left: 5%;
+  margin-top: 1%;
+  height: 3vw;
+  width: 3vw;
+  cursor: pointer;
 }
 
 .popup {

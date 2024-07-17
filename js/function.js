@@ -1,4 +1,4 @@
-// Get the form and the submit button
+/* Get the form and the submit button
 const form = document.querySelector(".Contact .Message");
 const submitButton = form.querySelector(".submit");
 
@@ -18,7 +18,7 @@ submitButton.addEventListener("click", (event) => {
 
   // You can add additional logic here, such as sending the form data to a server
   console.log("Form submitted and fields cleared");
-});
+});*/
 
 //--------------------------------------------------------------//
 
@@ -31,15 +31,15 @@ const searchButton = temp.querySelector(".search-button");
 const clearButton = temp.querySelector(".search-clear");
 
 searchButton.addEventListener("click", (event) => {
-  const input = temp.querySelector(".search-input").value;
+  const input = temp.querySelector(".search-input").value.toLowerCase();
 
-  if (input === "Temple" || input === "temple") {
-    console.log("Temple search");
+  if (input === "temple") {
+    console.log(input);
     openPopup();
-  } else if (input === "Beach" || input === "beach") {
+  } else if (input === "beach") {
     console.log("Beach search");
     openPopupB();
-  } else if (input === "USA" || input === "usa" || input === "Usa") {
+  } else if (input === "usa") {
     console.log("USA");
     openPopupUSA();
   }
@@ -48,6 +48,7 @@ searchButton.addEventListener("click", (event) => {
 clearButton.addEventListener("click", (event) => {
   const input = temp.querySelector(".search-input");
   input.value = "";
+  closePopup();
 });
 
 function openPopup() {
